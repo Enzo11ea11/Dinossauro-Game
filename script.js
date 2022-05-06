@@ -17,7 +17,7 @@ function jump() {
     isJumping = true;
 
     let upInterval = setInterval(() => {
-        if (position >= 150) {
+        if (position >= 250) {
           // Descendo
           clearInterval(upInterval);
 
@@ -26,13 +26,13 @@ function jump() {
               clearInterval(downInterval);
               isJumping = false;
             } else {
-              position -= 20;
+              position -= 10;
               dino.style.bottom = position + 'px';
             }
           }, 20);
         } else {
           // Subindo
-          position += 20;
+          position += 30;
           dino.style.bottom = position + 'px';
         }
     }, 20);
